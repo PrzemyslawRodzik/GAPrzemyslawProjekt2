@@ -34,6 +34,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            przemr/projekt2-zad1:ghprzemek1
+            przemr/projekt2-zad4:ghprzemek1
           cache-from: type=gha
           cache-to: type=gha,mode=max
