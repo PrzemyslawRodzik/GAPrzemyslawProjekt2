@@ -2,7 +2,9 @@ name: GitHub Action flow to Docker hub
 
 on:
   push:
-    branches: [master]
+    branches:
+      - "master"
+      - "dev"
 
 jobs:
   build-push-images:
@@ -28,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./dockerfile.v1
+          file: ./Dockerfile
           push: true
           tags: |
-            przemr/projekt2:ghprzemek1
+            przemr/projekt2-zad1:ghprzemek1
