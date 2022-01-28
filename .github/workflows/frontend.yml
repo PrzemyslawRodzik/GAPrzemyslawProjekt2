@@ -1,10 +1,11 @@
-name: GitHub Action flow to Docker hub
+name: GitHub Action flow to Docker hub with caching
 
 on:
   push:
     branches:
       - "master"
       - "dev"
+      - "zad4"
 
 jobs:
   build-push-images:
@@ -34,3 +35,5 @@ jobs:
           push: true
           tags: |
             przemr/projekt2-zad1:ghprzemek1
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
